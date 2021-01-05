@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, EventEmitter, Input, OnInit, Output, Type, ViewChild } from "@angular/core";
-import { CardContainerModel } from "src/models/card/card-container.model";
+import { CardContainerModel } from "../../../models/card/card-container.model";
 import { CardHostDirective } from "./card.directive";
 
 @Component({

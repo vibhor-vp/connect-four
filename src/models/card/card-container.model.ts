@@ -1,6 +1,6 @@
 import { Type } from "@angular/core";
-import { EntryCardComponent } from "src/app/common/card/entry-card/entry-card.component";
-import { InfoCardComponent } from "src/app/common/card/info-card/info-card.component";
+import { EntryCardComponent } from "../../app/common/card/entry-card/entry-card.component";
+import { InfoCardComponent } from "../../app/common/card/info-card/info-card.component";
 
 export class CardContainerModel {
     bg_color: string;

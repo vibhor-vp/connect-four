@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
-import { CardChildModel, CardContainerModel } from "src/models/card/card-container.model";
-import { PlayerModel } from "src/models/player.model";
-import { TournamentModel } from "src/models/tournament.model";
+import { CardChildModel, CardContainerModel } from "../../models/card/card-container.model";
+import { PlayerModel } from "../../models/player.model";
+import { TournamentModel } from "../../models/tournament.model";
 import { AppService } from "../app.service";
 import { InfoCardComponent } from "../common/card/info-card/info-card.component";
 import { GameComponent } from "./game/game.component";

@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Subject } from "rxjs";
-import { CardContainerModel } from "src/models/card/card-container.model";
-import { PlayerModel } from "src/models/player.model";
-import { TournamentModel } from "src/models/tournament.model";
-import { UserModel } from "src/models/user.model";
+import { CardContainerModel } from "../../models/card/card-container.model";
+import { PlayerModel } from "../../models/player.model";
+import { TournamentModel } from "../../models/tournament.model";
+import { UserModel } from "../../models/user.model";
 import { AppService } from "../app.service";
 import { EntryCardComponent } from "../common/card/entry-card/entry-card.component";
 import { PLAYERS_ICONS_ARR, PLAYER_START_OPTIONS_ENUM, TOURNAMET_GAMES_NUM_OPTIONS } from "../constants";

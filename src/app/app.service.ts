@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { TournamentModel } from "src/models/tournament.model";
+import { TournamentModel } from "../models/tournament.model";
 
 @Injectable()
 export class AppService {

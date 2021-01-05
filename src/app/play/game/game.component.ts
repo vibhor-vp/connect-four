@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AppService } from 'src/app/app.service';
-import { GAME_PLAYING_MODES, PLAYER_START_OPTIONS_ENUM } from 'src/app/constants';
-import { Util } from 'src/app/utils/common-utils';
-import { PlayerModel } from 'src/models/player.model';
-import { TournamentModel } from 'src/models/tournament.model';
+import { AppService } from '../../../app/app.service';
+import { GAME_PLAYING_MODES, PLAYER_START_OPTIONS_ENUM } from '../../../app/constants';
+import { Util } from '../../../app/utils/common-utils';
+import { PlayerModel } from '../../../models/player.model';
+import { TournamentModel } from '../../../models/tournament.model';
 
 @Component({
   selector: 'game',
