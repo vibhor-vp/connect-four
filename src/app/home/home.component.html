@@ -1,0 +1,40 @@
+<div class="center-block">
+    <div>
+        <h5 class="game-heading margin_unset">Connect Four!</h5>
+        <p class="game-sub-heading">Play with other players around the world.</p>
+    </div>
+
+    <div class="center-box">
+        <!-- container for upper play row -->
+        <div class="upper-section row">
+            <div class="play-box">
+                <div class="play-text-container">
+                    <span class="play-txt">PLAY</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="game-image">
+                    <img src="../../assets/images/4inarow.png" alt="Connect-four-image" width="509px">
+                </div>
+            </div>
+        </div>
+        <hr class="box-mid-line">
+        <!-- container for lower section (buttons section) -->
+        <div class="lower-section">
+            <div class="row margin_bottom_30">
+                <button class="btn bg_blue_1" (click)='comingSoonMethod()'>
+                    <span class="btn-txt color_white">Custom game</span>
+                </button>
+                <button class="btn bg_blue_2 margin_left_30" (click)='redirectToGameInfo()'>
+                    <span class="btn-txt color_white">Two Players</span>
+                </button>
+            </div>
+            <div class="row">
+                <button class="btn bg_blue_3" (click)='comingSoonMethod()'>
+                    <span class="btn-txt color_white">Game Online</span></button>
+                <button class="btn bg_blue_4 margin_left_30" (click)='comingSoonMethod()'>
+                    <span class="btn-txt color_white">Training Game</span></button>
+            </div>
+        </div>
+    </div>
+</div>

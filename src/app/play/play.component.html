@@ -1,0 +1,44 @@
+<div class="center-block-md center-box bg_grey padding_reset">
+    <div class="row">
+        <!-- first-column -->
+        <div class="bg_white game-container">
+            <!-- game-section here -->
+            <game #gameRef (gameCompleted)="gameCompleted($event)"></game>
+        </div>
+        <!-- game info section -->
+        <div class="game-info-container">
+            <div class="heading-section">
+                <h3 class="margin_bottom_10">{{tournamentObj.noOfGames}} Games Tournament</h3>
+                <ng-container *ngIf="_gameCompleted">
+                    <h4 class="margin_bottom_unset color_red_1">CONGRATULATIONS</h4>
+                    <p class="margin_bottom_30 margin_top_unset">{{_last_game_winner_player.info.name}}, you won
+                        {{_tournamentCompleted? 'Tournament' : 'Game ' + tournamentObj.gamesPlayed}}</p>
+                </ng-container>
+                <p class="margin_bottom_30" *ngIf="!_gameCompleted">Playing game {{tournamentObj.gamesPlayed+1}}</p>
+            </div>
+            <div>
+                <ng-container *ngFor="let cardContainerData of cardContainerDataArr">
+                    <card [cardContainerData]="cardContainerData"></card>
+                </ng-container>
+            </div>
+            <hr class="box-mid-line">
+            <div class="button-container">
+                <ng-container *ngIf="!_tournamentCompleted">
+                    <button *ngIf="!_gameCompleted" class="btn bg_blue_2 margin_bottom_30" (click)="undo()">
+                        <span class="btn-txt color_white">Undo</span>
+                    </button>
+                    <button *ngIf="_gameCompleted" class="btn bg_blue_2 margin_bottom_30" (click)="playNextGame()">
+                        <span class="btn-txt color_white">Next Game</span>
+                    </button>
+                </ng-container>
+                <button *ngIf="_tournamentCompleted" class="btn bg_blue_2 margin_bottom_30"
+                    (click)="playTournamentAgain()">
+                    <span class="btn-txt color_white">Play again</span>
+                </button>
+                <button class="btn bg_white" (click)="endTournament()">
+                    <span class="btn-txt color_red_1"> End Tournament</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

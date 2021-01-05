@@ -1,0 +1,20 @@
+<div>
+    <div *ngFor='let row of gameContainerArr; let i=index;let lastrow=last; let firstrow=first' class="game-row">
+        <!-- <div *ngFor='let column of row; let j=index; let lastColumn=last; let firstColumn=first' class="game-slot-container" 
+        [ngClass]="{'top-border-radius': firstrow, 'right-border-radius': lastColumn, 'bottom-border-radius': lastrow,
+        'left-border-radius': firstColumn}"> -->
+        <div *ngFor='let column of row; let j=index; let lastColumn=last; let firstColumn=first'
+            class="game-slot-container" [ngStyle]="{'border-top-left-radius': ((firstrow && firstColumn) ? test : (firstrow||firstColumn)?test1:'0px'),
+        'border-top-right-radius': ((firstrow && lastColumn) ? test : (lastColumn||firstrow)?test1:'0px'),
+        'border-bottom-right-radius': ((lastrow && lastColumn) ? test : (lastColumn|| lastrow)?test1:'0px'),
+        'border-bottom-left-radius': ((lastrow && firstColumn) ? test : (lastrow||firstColumn)?test1:'0px')}">
+            <div class="game-slot" (click)="slotClick(i, j)"
+                [ngStyle]="{'border-color': (column?.select)? 'red':'#84A4FC'}">
+                <div *ngIf="column" class="game-icon-container" [ngStyle]="{'border-color': column.icon_bg_color}">
+                    <!-- <img src="{{data.img}}" alt="icon" class="img_cls"> -->
+                    <img src="{{column.icon}}" style="margin: unset;" class="icon_cls icon_width">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

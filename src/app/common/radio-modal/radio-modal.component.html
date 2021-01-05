@@ -1,0 +1,28 @@
+<div class="modal center-box border_radius_unset" *ngIf="showModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <span class="heading">{{modalHeading}}</span>
+        </div>
+        <div class="modal-content">
+            <ul>
+                <li *ngFor="let rad of radioDataList" class="radio-container">
+                    <!-- <div class="radio-container"> -->
+                    <radio-input [radioVal]='rad.val' [radioText]='rad.text' [(ngModel)]="selectedRadioVal"
+                        (ngModelChange)="radioValChanged($event)" [name]='rad.name'>
+                    </radio-input>
+                    <!-- </div> -->
+                </li>
+            </ul>
+        </div>
+        <hr class="box-mid-line">
+        <div class="modal-footer">
+            <button class="btn btn_white" (click)='secondaryCTAClick()'>
+                <span class="btn-txt color_blue_2">{{secondaryCTA}}</span>
+            </button>
+            <button class="btn bg_blue_2 margin_left_30" type="submit" (click)='primaryCTAClick()'>
+                <span class="btn-txt color_white">{{primaryCTA}}</span>
+            </button>
+        </div>
+
+    </div>
+</div>

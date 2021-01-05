@@ -1,0 +1,61 @@
+.upper-section{
+    position: relative;
+    padding-left:  76px;
+    padding-top: 61px;
+}
+
+.play-box{
+    position: relative;
+    height: 132px;
+    width: 132px;
+    background-color: #FF7243;
+    border-radius: 20px;
+    margin-bottom: 101px;
+    box-shadow: 0px 3px 10px #00000029;
+}
+
+.play-text-container{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.play-txt{
+    font: normal normal medium 22px Poppins;
+    letter-spacing: 4.4px;
+    color: #424242;
+    opacity: 1;
+}
+
+.image-container{
+    position: relative;
+}
+
+.game-image{
+    position: absolute;
+    top: -235px;
+    left: 70px;
+}
+
+.lower-section{
+    padding-top: 101px; 
+}
+
+.game-heading{
+    font-size: 28px;
+    letter-spacing: 0px;
+    color: #3D4276;
+    text-transform: uppercase;
+    opacity: 1;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.game-sub-heading{
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #949494;
+    font-family: Poppins;
+}

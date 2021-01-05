@@ -1,0 +1,15 @@
+<div class="row card-entry-container">
+    <div class="icon-container" [ngStyle]="{'border-color': data.imgBoxColor}">
+        <img src="{{data.img}}" alt="icon" class="icon_cls">
+    </div>
+    <div class="detail-container">
+        <p class="title">{{data.title}}</p>
+        <ng-container *ngIf="data.type==='text'">
+            <custom-input [(ngModel)]='textVal' (ngModelChange)="textChange($event)"></custom-input>
+        </ng-container>
+        <ng-container *ngIf="data.type==='radio'">
+            <p class="option_txt margin_unset">{{data.val}}</p>
+        </ng-container>
+        <hr class="box-mid-line">
+    </div>
+</div>

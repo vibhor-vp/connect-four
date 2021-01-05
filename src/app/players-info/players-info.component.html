@@ -1,0 +1,24 @@
+<!-- {{formData | json}}
+{{formModel | json}} -->
+<div class="center-block center-box">
+    <!-- upper-section -->
+    <div class="">
+        <ng-container *ngFor="let cardContainerData of cardContainerDataArr">
+            <card [cardContainerData]="cardContainerData"></card>
+        </ng-container>
+    </div>
+    <hr>
+    <div>
+        <button class="btn bg_blue_2 full_width" (click)="submitTournamentOptions()">
+            <span class="btn-txt color_white">Start Game</span>
+        </button>
+    </div>
+</div>
+
+<radio-modal [radioModalShowSubject]="gamesNoModalShowSubject" [modalHeading]="'Number of Games'"
+    [radioDataList]="gamesNoOptionsList" [primaryCTA]="'Submit'" [secondaryCTA]="'Cancel'"
+    [primaryCTAFn]="noOfGamesSubmitted.bind(this)"></radio-modal>
+
+<radio-modal [radioModalShowSubject]="gameTurnModalShowSubject" [modalHeading]="'Who starts'"
+    [radioDataList]="gameTurnOptionsList" [primaryCTA]="'Submit'" [secondaryCTA]="'Cancel'"
+    [primaryCTAFn]="gameStartValSubmitted.bind(this)"></radio-modal>

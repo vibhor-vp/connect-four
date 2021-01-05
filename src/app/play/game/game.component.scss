@@ -1,0 +1,48 @@
+.game-row{
+    display: flex;
+}
+
+.game-slot-container{
+    padding: 2px;
+    background-color: #84A4FC;
+    border: 1px solid #84A4FC;
+}
+
+.game-icon-container{
+    border: 15px solid transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.top-border-radius{
+    border-radius: 40% 40% 0px 0px;
+}
+
+.right-border-radius{
+    border-radius: 0px 50% 50% 0px;
+}
+
+.bottom-border-radius{
+    border-radius: 0px 0px 50% 50%;
+}
+
+.left-border-radius{
+    border-radius: 50% 0px 0px 50%;
+}
+
+.game-slot{
+    background-color: white;
+    border: 6px solid;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    // padding: 10px;
+    // margin: 10px;
+}
+
+.icon_width{
+    width: 28px;
+}
