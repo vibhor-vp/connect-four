@@ -86,6 +86,7 @@ export class PlayComponent implements OnInit {
     playTournamentAgain(): void {
         this._gameCompleted = false;
         this.tournamentObj.players.forEach(player => { player.gamesWon == 0 });
+        this.cardContainerDataArr.forEach(card => {card.childComponentObj.data.subTitle1 = '0'});
         this.gameCompRef.resetGame();
         this.tournamentObj.gamesPlayed = 0;
     }

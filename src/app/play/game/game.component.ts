@@ -166,18 +166,17 @@ export class GameComponent extends Util implements OnInit {
         return;
       }
     }
-    this.checkDiagonally(index, col)
-    // let gameStatus = this.isGameWon(index, col);
-    // if (gameStatus && gameStatus._isGameWon) {
-    //   gameStatus.rowColArr && gameStatus.rowColArr.forEach((indexes) => {
-    //     this.gameContainerArr[indexes[0]][indexes[1]].select = true;
-    //   })
-    //   this._gameCompleted = true;
-    //   setTimeout(() => {
-    //     // alert('GAME WON');
-    //     this.gameCompleted.emit(this.gameContainerArr[index][col]);
-    //   }, 200)
-    // }
+    let gameStatus = this.isGameWon(index, col);
+    if (gameStatus && gameStatus._isGameWon) {
+      gameStatus.rowColArr && gameStatus.rowColArr.forEach((indexes) => {
+        this.gameContainerArr[indexes[0]][indexes[1]].select = true;
+      })
+      this._gameCompleted = true;
+      setTimeout(() => {
+        // alert('GAME WON');
+        this.gameCompleted.emit(this.gameContainerArr[index][col]);
+      }, 200)
+    }
   }
 
   getGameSlotObj(player): any {
@@ -192,7 +191,7 @@ export class GameComponent extends Util implements OnInit {
     let _horizontalStatus = this.checkHorizontally(row, col);
     let _verticalStatus = this.checkVertically(row, col);
     let _diagonalStatus = this.checkDiagonally(row, col);
-    return _horizontalStatus._isGameWon ? _horizontalStatus : _verticalStatus// (_verticalStatus._isGameWon ? _verticalStatus : _diagonalStatus);
+    return _horizontalStatus._isGameWon ? _horizontalStatus : (_verticalStatus._isGameWon ? _verticalStatus : _diagonalStatus);
     // return this.checkHorizontally(row, col)._isGameWon?this.checkHorizontally(row, col):false
     //   ||
     //   this.checkVertically(row, col)._isGameWon?this.checkVertically(row, col):false
@@ -202,23 +201,6 @@ export class GameComponent extends Util implements OnInit {
 
   checkHorizontally(row, col): gameStatusModel {
     let obj = this.gameContainerArr[row][col];
-    // return (val === this.gameContainerArr[row][col + 1] &&
-    //   val === this.gameContainerArr[row][col + 2] &&
-    //   val === this.gameContainerArr[row][col + 3]) ||
-    //   (val === this.gameContainerArr[row][col - 1] &&
-    //     val === this.gameContainerArr[row][col - 2] &&
-    //     val === this.gameContainerArr[row][col - 3]);
-
-    // let count;
-    // for (let i = 0; i < this.gameWinSize; i++) {
-    //   count = 0;
-    //   for (let j = (col - i) < 0 ? col : (col - i); j <= (col + i); j++) {
-    //     if (val === this.gameContainerArr[row][j]) {
-    //       count++;
-    //     }
-    //   }
-    // }
-    // return count === this.gameWinSize;
 
     let i = col < (this.gameWinSize - 1) ? 0 : (col - (this.gameWinSize - 1)),
       j = col < (this.gameWinSize - 1) ? (this.gameWinSize - 1) : col;
