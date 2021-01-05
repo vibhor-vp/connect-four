@@ -12,7 +12,8 @@ import { RadioInputComponent } from "./radio/radio-input.component";
 @NgModule({
     declarations: [CardComponent, EntryCardComponent, InfoCardComponent, CardHostDirective, RadioInputComponent, RadioModalComponent, CustomInputComponent],
     imports: [CommonModule, FormsModule],
-    exports: [CardComponent, RadioInputComponent, RadioModalComponent, CustomInputComponent]
+    exports: [CardComponent, RadioInputComponent, RadioModalComponent, CustomInputComponent],
+    entryComponents: [EntryCardComponent, InfoCardComponent]
 })
 
 export class AppCommonModule {
